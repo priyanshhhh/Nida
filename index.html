@@ -187,7 +187,7 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
   </div>
 
   <div class="stat reveal">
-    <span class="stat-n">6</span>
+    <span class="stat-n" id="statCount">0</span>
     <span class="stat-l">unfriends<br>in 6 months.<br>and every time,<br>I came back.</span>
   </div>
 
@@ -682,7 +682,8 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
     It felt like the only thing I was doing right."
   </p>
   <div class="closing-ghost rslow">her.</div>
-  <p class="closing-last reveal" style="transition-delay:.5s">— Priyansh, Dum Spiro, Spero —</p>
+  <p class="closing-last reveal" style="transition-delay:.5s">— Priyansh, still waiting —</p>
+  <p class="closing-last reveal" style="transition-delay:.9s;margin-top:3.5rem;opacity:.3;font-size:.6rem;letter-spacing:.35em">written in winter &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; somewhere between 3am and never moving on</p>
 </section>
 
 <script>
@@ -718,6 +719,27 @@ setInterval(()=>dots.push({x:Math.random()*W,y:H+8,r:Math.random()*1.1+.25,s:Mat
 // SCROLL REVEAL
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on')}),{threshold:.12});
 document.querySelectorAll('.reveal,.rslow').forEach(el=>obs.observe(el));
+
+// COUNTING ANIMATION — the "6"
+const statEl = document.getElementById('statCount');
+if(statEl){
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        let n = 0;
+        const target = 6;
+        const step = () => {
+          n++;
+          statEl.textContent = n;
+          if(n < target) setTimeout(step, 320);
+        };
+        setTimeout(step, 400);
+        countObs.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.5});
+  countObs.observe(statEl);
+}
 
 // LOVE LIST STAGGER
 const lo=new IntersectionObserver(e=>e.forEach(x=>{
