@@ -113,18 +113,27 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
 .rslow.on{opacity:1!important}
 
 /* SOUND */
-#snd{position:fixed;bottom:2rem;right:2rem;z-index:9994;background:none;border:1px solid rgba(196,168,130,.18);color:var(--dim);font-family:'EB Garamond',serif;font-size:.72rem;font-style:italic;letter-spacing:.2em;padding:.55rem 1rem;cursor:none;transition:border-color .4s,color .4s}
+#snd{position:fixed;bottom:2rem;right:2rem;z-index:9994;background:none;border:1px solid rgba(196,168,130,.18);color:var(--dim);font-family:'EB Garamond',serif;font-size:.72rem;font-style:italic;letter-spacing:.2em;padding:.55rem 1rem;cursor:none;-webkit-tap-highlight-color:transparent;transition:border-color .4s,color .4s}
 #snd:hover{border-color:rgba(196,168,130,.4);color:var(--dust)}
 
 /* ORIGIN */
 .origin{padding:7rem 2rem;max-width:680px;margin:0 auto}
 .origin-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:300;font-style:italic;color:var(--rose);line-height:1.1;margin-bottom:.4rem}
+.origin-title.big{font-size:clamp(2.8rem,7vw,5rem)}
 .origin-sub{font-size:.63rem;letter-spacing:.4em;color:var(--dim);text-transform:uppercase;margin-bottom:3.5rem}
 .origin p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2.3vw,1.45rem);font-weight:300;line-height:2.1;color:var(--pale);margin-bottom:1rem}
 .origin .badge{display:inline-block;font-size:.63rem;letter-spacing:.35em;text-transform:uppercase;color:var(--rose);border:1px solid rgba(184,112,112,.22);padding:.3rem .9rem;margin-bottom:3rem}
 .origin .stat{display:flex;align-items:baseline;gap:1.2rem;margin:3rem 0;border-top:1px solid rgba(196,168,130,.08);padding-top:2.5rem}
 .origin .stat-n{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,5rem);font-weight:300;color:transparent;-webkit-text-stroke:1px var(--rose);line-height:1}
 .origin .stat-l{font-size:.68rem;letter-spacing:.28em;color:var(--dim);text-transform:uppercase;line-height:1.9}
+
+/* TIMESTAMP */
+.ts{display:block;font-size:.58rem;letter-spacing:.38em;color:var(--dimmer);text-transform:uppercase;margin-bottom:1.2rem;font-style:italic}
+
+/* ART OF STAYING SPECIAL */
+.staying-hero{padding:7rem 2rem;text-align:center;max-width:680px;margin:0 auto}
+.staying-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,6vw,4.5rem);font-weight:300;font-style:italic;color:var(--dust);line-height:1.15;margin-bottom:1.2rem}
+.staying-sub{font-size:clamp(.85rem,1.8vw,1.05rem);font-style:italic;color:var(--dim);line-height:2;max-width:480px;margin:0 auto}
 
 /* CLOSING */
 .closing{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem}
@@ -181,6 +190,7 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
 <!-- ORIGIN STORY -->
 <div class="origin">
   <p class="origin-sub">how it began</p>
+  <span class="ts reveal">somewhere in 2024 · Free Fire · a friend group lobby</span>
   <h2 class="origin-title reveal">we met in a game.<br>we were never supposed to.</h2>
 
   <div class="badge reveal">Free Fire — Dynamic Duo</div>
@@ -1362,6 +1372,21 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
 <section class="poetry" style="padding-top:6rem;padding-bottom:2rem">
   <p class="slabel">things I want to do with you, and for you</p>
 
+  <div class="poem reveal" style="max-width:none;margin-bottom:3rem">
+    <div class="pnum">—</div>
+    <p>I have this whole life I've been building in my head.</p>
+    <p>Not a fantasy. Not something vague.</p>
+    <p>Something specific, detailed, ours.</p>
+    <span class="gap"></span>
+    <p>And the unbearable thing about loving someone</p>
+    <p>you haven't been given yet</p>
+    <p>is that the list just keeps growing.</p>
+    <p>Every day, something new I want to do for you.</p>
+    <p>Every day, something I'm saving.</p>
+    <span class="gap"></span>
+    <p class="dim-p">Here's what I've saved so far.</p>
+  </div>
+
   <div class="poem reveal" style="max-width:none">
     <div class="pnum">—</div>
     <p>Buy you lilies and sunflowers.</p>
@@ -1563,7 +1588,8 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
 
 <div class="origin" style="padding-top:5rem;padding-bottom:3rem">
   <p class="origin-sub">who I am</p>
-  <h2 class="origin-title reveal">the boy who never<br>came home.</h2>
+  <span class="ts reveal">teenage years · hostel rooms · somewhere I never belonged</span>
+  <h2 class="origin-title big reveal">the boy who never<br>came home.</h2>
 
   <div class="reveal" style="margin-top:3rem">
     <p>My entire teenage life was a hostel room. Four walls, a bed, a window that looked out at nothing that belonged to me.</p>
@@ -1605,6 +1631,7 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
 <!-- HOSTEL POEM -->
 <section class="poetry" style="padding-top:2rem;padding-bottom:1rem">
   <p class="slabel">the hostel years</p>
+  <span class="ts" style="display:block;text-align:left;max-width:620px;margin:0 auto 2rem;padding:0 2rem">class 9 onwards · every friday · a corridor that emptied without me</span>
 
   <div class="poem reveal">
     <div class="pnum">—</div>
@@ -1989,6 +2016,81 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
 
 </section>
 
+<!-- ══ THE ART OF STAYING ══ -->
+<div style="border-top:1px solid rgba(196,168,130,.08);border-bottom:1px solid rgba(196,168,130,.08);background:linear-gradient(180deg,transparent,rgba(196,168,130,.03),transparent)">
+  <div class="staying-hero reveal">
+    <p class="staying-title">The art of staying.</p>
+    <p class="staying-sub">Not because I want them to —<br>but because they <em>want</em> to.</p>
+  </div>
+</div>
+
+<section class="poetry" style="padding-top:6rem">
+  <p class="slabel">on who stays</p>
+
+  <div class="poem reveal">
+    <div class="pnum">—</div>
+    <p>If people come to you</p>
+    <p>only because they feel lonely —</p>
+    <p>or because you fulfill something</p>
+    <p>they are temporarily missing —</p>
+    <span class="gap"></span>
+    <p>keep them at a distance.</p>
+    <span class="gap"></span>
+    <p>Not out of bitterness.</p>
+    <p>Not out of pride.</p>
+    <span class="gap"></span>
+    <p class="dim-p">But because you deserve</p>
+    <p class="dim-p">people who show up</p>
+    <p class="dim-p">when they have everything —</p>
+    <p class="dim-p">and still choose you.</p>
+  </div>
+
+  <div class="poem ita reveal">
+    <div class="pnum">—</div>
+    <p>They are self-serving.</p>
+    <p>Once their work is done,</p>
+    <p>once they get what they came for —</p>
+    <p>they leave.</p>
+    <span class="gap"></span>
+    <p>They always leave.</p>
+    <span class="gap"></span>
+    <p class="dim-p">And you are left standing there</p>
+    <p class="dim-p">wondering what you did wrong.</p>
+    <p class="dim-p">You did nothing wrong.</p>
+    <p class="dim-p">You were just convenient.</p>
+  </div>
+
+  <div class="poem raw reveal">
+    <div class="pnum">—</div>
+    <p>This applies everywhere.</p>
+    <p>Friendship. Relationship. Family.</p>
+    <span class="gap"></span>
+    <p>The version of love that only shows up</p>
+    <p>when it needs something</p>
+    <p>is not love.</p>
+    <span class="gap"></span>
+    <p class="shout">IT IS TRANSACTION.<br>AND YOU ARE NOT A SHOP.</p>
+    <span class="gap"></span>
+    <p class="dim-p">Know the difference.</p>
+    <p class="dim-p">Protect yourself accordingly.</p>
+  </div>
+
+  <div class="poem ctr reveal">
+    <div class="pnum">—</div>
+    <p>The art of staying</p>
+    <p>is rare.</p>
+    <span class="gap"></span>
+    <p style="color:var(--pale)">Whoever masters it for you</p>
+    <p style="color:var(--pale)">— keep them.</p>
+    <span class="gap"></span>
+    <p class="dim-p">Hold them like they're the whole point.</p>
+    <p class="dim-p">Because they are.</p>
+  </div>
+
+</section>
+
+<div class="dv"><span>∗</span></div>
+
 <!-- ══ THINGS MEANT TO HAPPEN ══ -->
 <div class="band rb reveal">
   <p>I believe that things meant to happen<br>always find a way to happen.</p>
@@ -2043,21 +2145,34 @@ section,.band,.raw-s,.hindi-s,.photo-s,.dv{position:relative;z-index:2}
 <!-- CLOSING with NIDA watermark -->
 <section class="closing" style="overflow:hidden">
   <div class="nida-wm" aria-hidden="true">nida</div>
-  <p class="closing-text reveal">
+
+  <p class="closing-last reveal" style="transition-delay:.1s;margin-bottom:3rem;font-style:italic;color:var(--dimmer);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase">she once said —</p>
+
+  <p class="closing-text reveal" style="transition-delay:.3s;color:var(--dust)">
+    "you never talk."
+  </p>
+
+  <p class="closing-last reveal" style="transition-delay:.6s;font-style:italic;color:var(--dim);font-size:.85rem;letter-spacing:.1em;margin-top:1.2rem;text-transform:none">
+    "I talk to you," I said.
+  </p>
+
+  <div style="width:1px;height:60px;background:linear-gradient(to bottom,rgba(196,168,130,.2),transparent);margin:3rem auto"></div>
+
+  <p class="closing-text reveal" style="transition-delay:.9s">
     "I overthink everything.<br>
     But thinking about you<br>
     never felt like a problem.<br>
     It felt like the only thing I was doing right."
   </p>
   <div class="closing-ghost rslow">her.</div>
-  <p class="closing-last reveal" style="transition-delay:.5s">— Priyansh —</p>
-  <p class="closing-last reveal" style="transition-delay:.75s;margin-top:2rem;font-style:italic;color:var(--dim);font-size:.8rem;letter-spacing:.1em;max-width:420px;text-align:center;line-height:2">
+  <p class="closing-last reveal" style="transition-delay:1.2s">— Priyansh —</p>
+  <p class="closing-last reveal" style="transition-delay:1.45s;margin-top:2rem;font-style:italic;color:var(--dim);font-size:.8rem;letter-spacing:.1em;max-width:420px;text-align:center;line-height:2;text-transform:none">
     I'm not waiting for her.<br>I'm with her — in every version of myself that matters.<br>I don't want to move on.<br>I want <em>her.</em>
   </p>
-  <p class="closing-last reveal" style="transition-delay:1s;margin-top:2.5rem;font-style:italic;color:var(--rose);font-size:.85rem;letter-spacing:.08em">
+  <p class="closing-last reveal" style="transition-delay:1.7s;margin-top:2.5rem;font-style:italic;color:var(--rose);font-size:.85rem;letter-spacing:.08em;text-transform:none">
     She is perfect. She has always been perfect.
   </p>
-  <p class="closing-last reveal" style="transition-delay:1.3s;margin-top:3.5rem;opacity:.3;font-size:.6rem;letter-spacing:.35em">written in winter &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; somewhere between 3am and always</p>
+  <p class="closing-last reveal" style="transition-delay:1.9s;margin-top:3.5rem;opacity:.3;font-size:.6rem;letter-spacing:.35em">written in winter &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; somewhere between 3am and always</p>
 </section>
 
 <script>
